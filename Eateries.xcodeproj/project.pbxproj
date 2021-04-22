@@ -15,6 +15,9 @@
 		DD2645A62631250B005761B7 /* EateriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2645A52631250B005761B7 /* EateriesUITests.swift */; };
 		DD2645B7263125BB005761B7 /* Eatery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2645B6263125BB005761B7 /* Eatery.swift */; };
 		DD2645BC263125CE005761B7 /* EateryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2645BB263125CE005761B7 /* EateryViewModel.swift */; };
+		DD26469B263149FA005761B7 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26469A263149FA005761B7 /* MasterView.swift */; };
+		DD2646A026314A07005761B7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26469F26314A07005761B7 /* DetailView.swift */; };
+		DD2646A526314A13005761B7 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2646A426314A13005761B7 /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		DD2645A72631250B005761B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2645B6263125BB005761B7 /* Eatery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eatery.swift; sourceTree = "<group>"; };
 		DD2645BB263125CE005761B7 /* EateryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateryViewModel.swift; sourceTree = "<group>"; };
+		DD26469A263149FA005761B7 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
+		DD26469F26314A07005761B7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DD2646A426314A13005761B7 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				DD26458E2631250A005761B7 /* Preview Content */,
 				DD2645B6263125BB005761B7 /* Eatery.swift */,
 				DD2645BB263125CE005761B7 /* EateryViewModel.swift */,
+				DD26469A263149FA005761B7 /* MasterView.swift */,
+				DD26469F26314A07005761B7 /* DetailView.swift */,
+				DD2646A426314A13005761B7 /* RowView.swift */,
 			);
 			path = Eateries;
 			sourceTree = "<group>";
@@ -266,8 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD2645B7263125BB005761B7 /* Eatery.swift in Sources */,
+				DD2646A026314A07005761B7 /* DetailView.swift in Sources */,
+				DD2646A526314A13005761B7 /* RowView.swift in Sources */,
 				DD26458B26312506005761B7 /* ContentView.swift in Sources */,
 				DD2645BC263125CE005761B7 /* EateryViewModel.swift in Sources */,
+				DD26469B263149FA005761B7 /* MasterView.swift in Sources */,
 				DD26458926312506005761B7 /* EateriesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

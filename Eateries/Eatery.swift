@@ -7,10 +7,26 @@
 
 import Foundation
 
+/// Eatery class
 class Eatery {
-    var title: String
+    var image: String
+    var name: String
+    var location: String
+    var notes: String
+    var reviews: String
     
-    init (title: String) {
-        self.title = title
+    /// Eatery initialisation
+    /// - Parameters:
+    ///   - image: URL of image
+    ///   - name: eatery name
+    ///   - location: eatery location
+    ///   - notes: notes of the eatery
+    ///   - reviews: reviews of the eatery
+    init (image: String, name: String, location: String, notes: String, reviews: String) {
+        self.image = image
+        self.name = name
+        self.location = location
+        self.notes = notes
+        self.reviews = reviews
     }
 }

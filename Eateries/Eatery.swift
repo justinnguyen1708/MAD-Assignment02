@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 
-/// Eatery class
-class Eatery {
-    var image: String
-    var name: String
-    var location: String
-    var notes: String
-    var reviews: String
+/// Eatery model class
+class Eatery: ObservableObject {
+    @Published var image: String
+    @Published var name: String
+    @Published var location: String
+    @Published var notes: String
+    @Published var reviews: [[String]]
     
     /// Eatery initialisation
     /// - Parameters:
@@ -22,11 +23,57 @@ class Eatery {
     ///   - location: eatery location
     ///   - notes: notes of the eatery
     ///   - reviews: reviews of the eatery
-    init (image: String, name: String, location: String, notes: String, reviews: String) {
+    init (image: String, name: String, location: String, notes: String, reviews: [[String]]) {
         self.image = image
         self.name = name
         self.location = location
         self.notes = notes
         self.reviews = reviews
+    }
+    
+    /// Add new review
+    func addNewReview () {
+        let newReview = [String(), String()]
+        self.reviews.append(newReview)
+    }
+    
+    
+    /// Remove specific review from the list of reviews
+    /// - Parameter indices: indices with specific index to be removed at
+    func removeReview (at indices: IndexSet) {
+        self.reviews.remove(atOffsets: indices)
+    }
+    
+    /// Move review to specific index
+    /// - Parameters:
+    ///   - indices: indices with specific index to be moved from
+    ///   - destination: destination index
+    func moveReview (from indices: IndexSet, to destination: Int) {
+        self.reviews.move(fromOffsets: indices, toOffset: destination)
+    }
+    
+    /// Download image from the internet using URL
+    /// - Parameter eateryURL: URL to eatery image
+    /// - Returns: downloaded image
+    func downloadEateryImage (foodURL: String) -> Image {
+        let emptyImage = Image("blank")
+        
+        // Check input URL -> assign to imageURL
+        guard let imageURL = URL(string: foodURL) else {
+            return emptyImage // Invalid URL
+        }
+        
+        // Download image -> assign to imageData
+        guard let imageData = try? Data(contentsOf: imageURL) else {
+            return emptyImage // Could not download the image
+        }
+        
+        // Get image from the downloaded data -> assign to uiImage
+        guard let uiImage = UIImage(data: imageData) else {
+            return emptyImage // Downloaded data do not contain an image
+        }
+        
+        // Return image to display on views
+        return Image(uiImage: uiImage)
     }
 }

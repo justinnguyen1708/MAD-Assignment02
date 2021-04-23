@@ -107,14 +107,14 @@
 			children = (
 				DD26458826312506005761B7 /* EateriesApp.swift */,
 				DD26458A26312506005761B7 /* ContentView.swift */,
-				DD26458C2631250A005761B7 /* Assets.xcassets */,
-				DD2645912631250A005761B7 /* Info.plist */,
-				DD26458E2631250A005761B7 /* Preview Content */,
 				DD2645B6263125BB005761B7 /* Eatery.swift */,
 				DD2645BB263125CE005761B7 /* EateryViewModel.swift */,
 				DD26469A263149FA005761B7 /* MasterView.swift */,
 				DD26469F26314A07005761B7 /* DetailView.swift */,
 				DD2646A426314A13005761B7 /* RowView.swift */,
+				DD26458C2631250A005761B7 /* Assets.xcassets */,
+				DD2645912631250A005761B7 /* Info.plist */,
+				DD26458E2631250A005761B7 /* Preview Content */,
 			);
 			path = Eateries;
 			sourceTree = "<group>";

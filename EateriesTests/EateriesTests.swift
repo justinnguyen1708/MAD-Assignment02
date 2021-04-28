@@ -106,7 +106,7 @@ class EateriesTests: XCTestCase {
         let eateryToTest = Eatery(image: "blank", name: "Brisbane cafe", location: "Brisbane", notes: "This is a good cafe!", reviews: [["A","I like it"], ["B","I do not like it"]])
         
         // URL for testing
-        let urlToTest = "abc"
+        let urlToTest = "https://www.visitbrisbane.com.au/~/media/choose/convention-bureau/news/boomboomroomrefurb_20201209_wide.ashx"
         
         // Name of blank image
         let blank = "blank"
@@ -115,7 +115,7 @@ class EateriesTests: XCTestCase {
         let image = eateryToTest.downloadEateryImage(foodURL: urlToTest)
         
         // Check whether food image is set to blank due to invalid url
-        XCTAssertEqual(image, Image(blank))
+        XCTAssertNotEqual(image, Image(blank))
     }
     
     // EateryViewModel class functions //

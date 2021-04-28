@@ -94,7 +94,7 @@ class EateriesTests: XCTestCase {
         let blank = "blank"
         
         // Download image using invalid url
-        let image = eateryToTest.downloadEateryImage(foodURL: urlToTest)
+        let image = eateryToTest.downloadEateryImage(eateryURL: urlToTest)
         
         // Check whether food image is set to blank due to invalid url
         XCTAssertEqual(image, Image(blank))
@@ -112,7 +112,7 @@ class EateriesTests: XCTestCase {
         let blank = "blank"
         
         // Download image using invalid url
-        let image = eateryToTest.downloadEateryImage(foodURL: urlToTest)
+        let image = eateryToTest.downloadEateryImage(eateryURL: urlToTest)
         
         // Check whether food image is set to blank due to invalid url
         XCTAssertNotEqual(image, Image(blank))

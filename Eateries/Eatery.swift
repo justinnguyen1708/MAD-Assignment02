@@ -55,11 +55,11 @@ class Eatery: ObservableObject, Identifiable, Decodable, Encodable {
     /// Download image from the internet using URL
     /// - Parameter eateryURL: URL to eatery image
     /// - Returns: downloaded image
-    func downloadEateryImage (foodURL: String) -> Image {
+    func downloadEateryImage (eateryURL: String) -> Image {
         let emptyImage = Image("blank")
         
         // Check input URL -> assign to imageURL
-        guard let imageURL = URL(string: foodURL) else {
+        guard let imageURL = URL(string: eateryURL) else {
             return emptyImage // Invalid URL
         }
         

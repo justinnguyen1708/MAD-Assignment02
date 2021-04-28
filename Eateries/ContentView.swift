@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var listOfEateries: EateryViewModel
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            MasterView(listOfEateries: listOfEateries)
+                .navigationBarTitle("Eateries")
+                .navigationBarItems(leading: EditButton(),
+                                    trailing: Button(action: {
+                                        withAnimation{
+                                            listOfEateries.addNewEatery()
+                                            
+                                        }
+                                    }) {
+                                        Image(systemName: "plus")
+                                    })
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

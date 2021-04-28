@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 /// Eatery model class
-class Eatery: ObservableObject {
+class Eatery: ObservableObject, Identifiable, Decodable, Encodable {
     @Published var image: String
     @Published var name: String
     @Published var location: String
@@ -75,5 +75,33 @@ class Eatery: ObservableObject {
         
         // Return image to display on views
         return Image(uiImage: uiImage)
+    }
+    
+    enum CodingKeys: String, CodingKey, RawRepresentable {
+        case image
+        case name
+        case location
+        case notes
+        case reviews
+    }
+    
+    /// JSON decoder
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        image = try container.decode(String.self, forKey: .image)
+        name = try container.decode(String.self, forKey: .name)
+        location = try container.decode(String.self, forKey: .location)
+        notes = try container.decode(String.self, forKey: .notes)
+        reviews = try container.decode([[String]].self, forKey: .reviews)
+    }
+    
+    // JSON encoder
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(image, forKey: .image)
+        try container.encode(name, forKey: .name)
+        try container.encode(location, forKey: .location)
+        try container.encode(notes, forKey: .notes)
+        try container.encode(reviews, forKey: .reviews)
     }
 }

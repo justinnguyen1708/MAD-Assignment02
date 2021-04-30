@@ -32,9 +32,10 @@ struct DetailView: View {
                 
                 // Recipe section
                 Section (header: Text("NOTES")){
-                    TextField("Notes", text: $eatery.notes, onCommit: {
-                        EateriesApp.save()
-                    })
+                    TextEditor(text: $eatery.notes)
+                        .onChange(of: eatery.notes, perform: { value in
+                            EateriesApp.save()
+                        })
                 }
                 
                 // Ingredients section

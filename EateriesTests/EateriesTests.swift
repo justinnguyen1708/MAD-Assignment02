@@ -72,16 +72,6 @@ class EateriesTests: XCTestCase {
         XCTAssertEqual(eateryToTest.reviews.count, numberOfReviews + 1)
     }
     
-    /// Test delete a review
-    func testRemoveReview() throws {
-        
-    }
-    
-    /// Test moving review
-    func testMoveReview() throws {
-        
-    }
-    
     /// Test downloading image using invalid image
     func testDownloadEateryImageInvalid() throws {
         // Eatery object for testing
@@ -132,6 +122,10 @@ class EateriesTests: XCTestCase {
         
         // Check whether list of eateries of modelToTest is equal eateriesToTest
         XCTAssertEqual(modelToTest.listOfEateries.count, eateriesToTest.count)
+    }
+    
+    func testJSON() throws {
+        
     }
     
 

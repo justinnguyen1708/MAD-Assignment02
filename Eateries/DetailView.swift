@@ -57,9 +57,11 @@ struct DetailView: View {
                         // Delete a ingredient
                     }.onDelete { indices in
                         eatery.removeReview(at: indices)
+                        EateriesApp.save()
                         // Reorder a ingredient
                     }.onMove { (indices, destination) in
                         eatery.moveReview(from: indices, to: destination)
+                        EateriesApp.save()
                     }
                     
                     HStack{
@@ -73,6 +75,7 @@ struct DetailView: View {
                         }.onTapGesture {
                             withAnimation{
                                 eatery.addNewReview()
+                                EateriesApp.save()
                             }
                         }
                         Spacer()

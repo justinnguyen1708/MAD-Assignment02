@@ -77,6 +77,7 @@ class Eatery: ObservableObject, Identifiable, Decodable, Encodable {
         return Image(uiImage: uiImage)
     }
     
+    /// JSON coding keys for decoder and encoder
     enum CodingKeys: String, CodingKey, RawRepresentable {
         case image
         case name
@@ -95,7 +96,7 @@ class Eatery: ObservableObject, Identifiable, Decodable, Encodable {
         reviews = try container.decode([[String]].self, forKey: .reviews)
     }
     
-    // JSON encoder
+    /// JSON encoder
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(image, forKey: .image)

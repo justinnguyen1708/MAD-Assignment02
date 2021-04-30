@@ -7,17 +7,18 @@
 
 import SwiftUI
 
+/// ContentView to show NavigationView which contains MasterView
 struct ContentView: View {
-    @ObservedObject var listOfEateries: EateryViewModel
+    @Binding var eateryViewModel: EateryViewModel
     
     var body: some View {
         NavigationView {
-            MasterView(listOfEateries: listOfEateries)
+            MasterView(eateryViewModel: eateryViewModel)
                 .navigationBarTitle("Eateries")
                 .navigationBarItems(leading: EditButton(),
                                     trailing: Button(action: {
                                         withAnimation{
-                                            listOfEateries.addNewEatery()
+                                            eateryViewModel.addNewEatery()
                                             
                                         }
                                     }) {

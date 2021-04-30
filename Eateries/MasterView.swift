@@ -7,28 +7,31 @@
 
 import SwiftUI
 
+/// MasterView show listOfEateries
 struct MasterView: View {
     @Environment(\.editMode) var editMode
     
     // listOfFood can be changed
-    @ObservedObject var listOfEateries: EateryViewModel
+    @ObservedObject var eateryViewModel: EateryViewModel
     
     var body: some View {
         List {
-            ForEach(listOfEateries.listOfEateries) { eatery in
+            ForEach(eateryViewModel.listOfEateries) { eatery in
                 NavigationLink(
                     destination: DetailView(eatery: eatery)
                         .navigationBarItems(trailing: EditButton()),
                     // Eatery item thumbnail
                     label: {
+                        // This view is created to ensure information are updated
+                        // in MasterView after modifying information in DetailView
                         RowView(eatery: eatery)
                     })
                 // Delete a specific eatery
             }.onDelete { indices in
-                listOfEateries.removeEatery(at: indices)
+                eateryViewModel.removeEatery(at: indices)
                 // Reorder eateries
             }.onMove { (indices, destination) in
-                listOfEateries.moveEatery(from: indices, to: destination)
+                eateryViewModel.moveEatery(from: indices, to: destination)
             }
         }
     }

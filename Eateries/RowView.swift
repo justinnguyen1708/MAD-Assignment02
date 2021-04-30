@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Show image, name, and notes of eateries
 struct RowView: View {
     @ObservedObject var eatery: Eatery
     var body: some View {

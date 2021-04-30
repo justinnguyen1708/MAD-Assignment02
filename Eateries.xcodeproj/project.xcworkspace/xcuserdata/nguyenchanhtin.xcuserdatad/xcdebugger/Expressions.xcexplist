@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "EateryViewModel.addNewEatery():EateryViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "listOfEateries">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in variable initialization expression of static EateriesApp.eateryViewModel:EateriesApp.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static EateriesApp.fileURL.getter:EateriesApp.swift">
+      </ContextState>
+      <ContextState
+         contextName = "static EateriesApp.save():EateriesApp.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

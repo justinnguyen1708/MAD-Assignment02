@@ -19,7 +19,7 @@ struct ContentView: View {
                                     trailing: Button(action: {
                                         withAnimation{
                                             eateryViewModel.addNewEatery()
-                                            
+                                            EateriesApp.save()
                                         }
                                     }) {
                                         Image(systemName: "plus")

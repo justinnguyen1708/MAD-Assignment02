@@ -48,7 +48,7 @@ struct EateriesApp: App {
     /// Encoding JSON file then save it locally
     static func save() {
         do {
-            let data = try JSONEncoder().encode(listOfEateries)
+            let data = try JSONEncoder().encode(eateryViewModel.listOfEateries)
             try data.write(to: fileURL, options: .atomic)
             guard let dataString = String(data: data, encoding: .utf8) else {
                 return

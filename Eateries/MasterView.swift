@@ -29,9 +29,11 @@ struct MasterView: View {
                 // Delete a specific eatery
             }.onDelete { indices in
                 eateryViewModel.removeEatery(at: indices)
+                EateriesApp.save()
                 // Reorder eateries
             }.onMove { (indices, destination) in
                 eateryViewModel.moveEatery(from: indices, to: destination)
+                EateriesApp.save()
             }
         }
     }

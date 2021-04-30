@@ -14,7 +14,6 @@ class Eatery: ObservableObject, Identifiable, Decodable, Encodable {
     @Published var name: String
     @Published var location: String
     @Published var notes: String
-    @Published var reviews: [[String]]
     
     /// Eatery initialisation
     /// - Parameters:
@@ -23,33 +22,11 @@ class Eatery: ObservableObject, Identifiable, Decodable, Encodable {
     ///   - location: eatery location
     ///   - notes: notes of the eatery
     ///   - reviews: reviews of the eatery
-    init (image: String, name: String, location: String, notes: String, reviews: [[String]]) {
+    init (image: String, name: String, location: String, notes: String) {
         self.image = image
         self.name = name
         self.location = location
         self.notes = notes
-        self.reviews = reviews
-    }
-    
-    /// Add new review
-    func addNewReview () {
-        let newReview = [String(), String()]
-        self.reviews.append(newReview)
-    }
-    
-    
-    /// Remove specific review from the list of reviews
-    /// - Parameter indices: indices with specific index to be removed at
-    func removeReview (at indices: IndexSet) {
-        self.reviews.remove(atOffsets: indices)
-    }
-    
-    /// Move review to specific index
-    /// - Parameters:
-    ///   - indices: indices with specific index to be moved from
-    ///   - destination: destination index
-    func moveReview (from indices: IndexSet, to destination: Int) {
-        self.reviews.move(fromOffsets: indices, toOffset: destination)
     }
     
     /// Download image from the internet using URL
@@ -83,7 +60,6 @@ class Eatery: ObservableObject, Identifiable, Decodable, Encodable {
         case name
         case location
         case notes
-        case reviews
     }
     
     /// JSON decoder
@@ -93,7 +69,6 @@ class Eatery: ObservableObject, Identifiable, Decodable, Encodable {
         name = try container.decode(String.self, forKey: .name)
         location = try container.decode(String.self, forKey: .location)
         notes = try container.decode(String.self, forKey: .notes)
-        reviews = try container.decode([[String]].self, forKey: .reviews)
     }
     
     /// JSON encoder
@@ -103,6 +78,5 @@ class Eatery: ObservableObject, Identifiable, Decodable, Encodable {
         try container.encode(name, forKey: .name)
         try container.encode(location, forKey: .location)
         try container.encode(notes, forKey: .notes)
-        try container.encode(reviews, forKey: .reviews)
     }
 }

@@ -7,36 +7,50 @@
 
 import SwiftUI
 
+// Show eatery information
 struct DetailView: View {
     @ObservedObject var eatery: Eatery
+    
     @Environment(\.editMode) var mode
     
     var body: some View {
         List {
             if mode?.wrappedValue == .active {
                 HStack {
-                    TextField("Eatery image", text: $eatery.image)
+                    TextField("Eatery image", text: $eatery.image, onCommit: {
+                        EateriesApp.save()
+                    })
                 }
                 // Eatery title, description and story are shown in this section
-                Section(header: TextField("Name", text: $eatery.name)){
-                    TextField("Location", text: $eatery.location)
+                Section(header: TextField("Name", text: $eatery.name, onCommit: {
+                    EateriesApp.save()
+                })){
+                    TextField("Location", text: $eatery.location, onCommit: {
+                        EateriesApp.save()
+                    })
                 }
                 
                 // Recipe section
                 Section (header: Text("NOTES")){
-                    TextField("Notes", text: $eatery.notes)
+                    TextField("Notes", text: $eatery.notes, onCommit: {
+                        EateriesApp.save()
+                    })
                 }
                 
                 // Ingredients section
                 Section (header: Text("REVIEWS")){
                     ForEach(0..<eatery.reviews.count, id: \.self) { i in
                         HStack {
-                            TextField("Author", text: $eatery.reviews[i][0])
+                            TextField("Author", text: $eatery.reviews[i][0], onCommit: {
+                                EateriesApp.save()
+                            })
                                 .font(.body)
-                                .frame(width: 50.0)
+                                .frame(width: 60.0)
                             Spacer()
                                 .frame(width: 50.0)
-                            TextField("Review", text: $eatery.reviews[i][1])
+                            TextField("Review", text: $eatery.reviews[i][1], onCommit: {
+                                EateriesApp.save()
+                            })
                                 .font(.body)
                                 .multilineTextAlignment(.leading)
                         }

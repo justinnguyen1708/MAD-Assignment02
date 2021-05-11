@@ -18,7 +18,6 @@
 		DD26469B263149FA005761B7 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26469A263149FA005761B7 /* MasterView.swift */; };
 		DD2646A026314A07005761B7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26469F26314A07005761B7 /* DetailView.swift */; };
 		DD2646A526314A13005761B7 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2646A426314A13005761B7 /* RowView.swift */; };
-		DD93515C263C5CA600A75E7A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93515B263C5CA600A75E7A /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		DD26469A263149FA005761B7 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		DD26469F26314A07005761B7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DD2646A426314A13005761B7 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
-		DD93515B263C5CA600A75E7A /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +107,6 @@
 			children = (
 				DD2645B6263125BB005761B7 /* Eatery.swift */,
 				DD2645BB263125CE005761B7 /* EateryViewModel.swift */,
-				DD93515B263C5CA600A75E7A /* Review.swift */,
 				DD26458826312506005761B7 /* EateriesApp.swift */,
 				DD26458A26312506005761B7 /* ContentView.swift */,
 				DD26469A263149FA005761B7 /* MasterView.swift */,
@@ -278,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD2645B7263125BB005761B7 /* Eatery.swift in Sources */,
-				DD93515C263C5CA600A75E7A /* Review.swift in Sources */,
 				DD2646A026314A07005761B7 /* DetailView.swift in Sources */,
 				DD2646A526314A13005761B7 /* RowView.swift in Sources */,
 				DD26458B26312506005761B7 /* ContentView.swift in Sources */,

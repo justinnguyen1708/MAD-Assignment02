@@ -20,7 +20,7 @@ class EateryViewModel: ObservableObject {
     
     /// Add a new eatery to the list
     func addNewEatery() {
-        let newEatery = Eatery(image: "blank", name: "<NEW>", location: "", notes: "", reviews: ReviewViewModel)
+        let newEatery = Eatery(image: "blank", name: "<NEW>", location: "", notes: "", reviews: [["",""]])
         listOfEateries.append(newEatery)
     }
     

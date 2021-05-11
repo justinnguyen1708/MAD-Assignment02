@@ -30,7 +30,7 @@ struct DetailView: View {
                     })
                 }
                 
-                // Recipe section
+                // Notes section
                 Section (header: Text("NOTES")){
                     TextEditor(text: $eatery.notes)
                         .onChange(of: eatery.notes, perform: { value in
@@ -38,7 +38,7 @@ struct DetailView: View {
                         })
                 }
                 
-                // Ingredients section
+                // Reviews section
                 Section (header: Text("REVIEWS")){
                     ForEach(0..<eatery.reviews.count, id: \.self) { i in
                         HStack {
@@ -55,11 +55,11 @@ struct DetailView: View {
                                 .font(.body)
                                 .multilineTextAlignment(.leading)
                         }
-                        // Delete a ingredient
+                        // Delete a review
                     }.onDelete { indices in
                         eatery.removeReview(at: indices)
                         EateriesApp.save()
-                        // Reorder a ingredient
+                        // Reorder a review
                     }.onMove { (indices, destination) in
                         eatery.moveReview(from: indices, to: destination)
                         EateriesApp.save()
@@ -101,13 +101,13 @@ struct DetailView: View {
                         .font(.body)
                 }
                 
-                // Recipe section
+                // Notes section
                 Section (header: Text("NOTES")){
                     Text(eatery.notes)
                         .font(.body)
                 }
                 
-                // Ingredients section
+                // Review section
                 Section (header: Text("REVIEWS")){
                     ForEach(0..<eatery.reviews.count, id: \.self) { i in
                         HStack {
@@ -127,8 +127,13 @@ struct DetailView: View {
     }
 }
 
-//struct DetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailView()
-//    }
-//}
+struct DetailView_Previews: PreviewProvider {
+    static var eatery = Eatery(image: "https://www.visitbrisbane.com.au/~/media/articles/2021/february/coppaspuntinopasta_20210223_wide.ashx", name: "Coppa Spuntino", location: "CBD", notes: """
+The love affair between Brisbane and Italy continues with the much-awaited opening of COPPA at Eagle Street Pier. \
+COPPA brings Italian flavours and flair to the table with indoor and alfresco spaces available when it opens in mid January.
+""", reviews: [["A","I like it"], ["B","I do not like it"]])
+    
+    static var previews: some View {
+        DetailView(eatery: eatery)
+    }
+}

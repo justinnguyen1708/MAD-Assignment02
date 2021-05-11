@@ -28,8 +28,12 @@ struct ContentView: View {
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(eateryViewModel: Binding(get: {
+            EateriesApp.eateryViewModel
+        }, set: { newValue in
+            EateriesApp.eateryViewModel = newValue
+        }))
+    }
+}

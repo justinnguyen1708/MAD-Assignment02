@@ -30,8 +30,13 @@ struct RowView: View {
     }
 }
 
-//struct RowView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RowView()
-//    }
-//}
+struct RowView_Previews: PreviewProvider {
+    static var eatery = Eatery(image: "https://www.visitbrisbane.com.au/~/media/articles/2021/february/coppaspuntinopasta_20210223_wide.ashx", name: "Coppa Spuntino", location: "CBD", notes: """
+The love affair between Brisbane and Italy continues with the much-awaited opening of COPPA at Eagle Street Pier. \
+COPPA brings Italian flavours and flair to the table with indoor and alfresco spaces available when it opens in mid January.
+""", reviews: [["A","I like it"], ["B","I do not like it"]])
+    
+    static var previews: some View {
+        RowView(eatery: EateriesApp.eateryViewModel.listOfEateries[0])
+    }
+}

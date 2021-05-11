@@ -39,8 +39,8 @@ struct MasterView: View {
     }
 }
 
-//struct MasterView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MasterView()
-//    }
-//}
+struct MasterView_Previews: PreviewProvider {
+    static var previews: some View {
+        MasterView(eateryViewModel: EateriesApp.eateryViewModel)
+    }
+}

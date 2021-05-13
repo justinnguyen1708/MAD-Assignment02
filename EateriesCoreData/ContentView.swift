@@ -19,10 +19,10 @@ struct ContentView: View {
     var body: some View {
         List {
             ForEach(eateries) { eatery in
-//                Text(eatery.image)
-//                Text(eatery.name)
-//                Text(eatery.location)
-//                Text(eatery.notes)
+                Text(eatery.imageString)
+                Text(eatery.nameString)
+                Text(eatery.locationString)
+                Text(eatery.notesString)
             }
             .onDelete(perform: deleteItems)
         }

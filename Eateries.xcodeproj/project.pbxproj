@@ -19,6 +19,7 @@
 		DD2646A026314A07005761B7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26469F26314A07005761B7 /* DetailView.swift */; };
 		DD2646A526314A13005761B7 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2646A426314A13005761B7 /* RowView.swift */; };
 		DD27D45D264CEC88004B29BC /* Review+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27D45C264CEC88004B29BC /* Review+ViewModel.swift */; };
+		DD27D45F264CEF8F004B29BC /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27D45E264CEF8F004B29BC /* MasterView.swift */; };
 		DD5124A0264CDC8D009C7102 /* Eatery+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD51249F264CDC8D009C7102 /* Eatery+ViewModel.swift */; };
 		DD5124EA264CE75E009C7102 /* GeneratedCode in Resources */ = {isa = PBXBuildFile; fileRef = DD5124E9264CE75E009C7102 /* GeneratedCode */; };
 		DD5124EC264CE79F009C7102 /* EateryModel+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5124EB264CE79F009C7102 /* EateryModel+ViewModel.swift */; };
@@ -82,6 +83,7 @@
 		DD26469F26314A07005761B7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DD2646A426314A13005761B7 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		DD27D45C264CEC88004B29BC /* Review+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Review+ViewModel.swift"; sourceTree = "<group>"; };
+		DD27D45E264CEF8F004B29BC /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		DD51249F264CDC8D009C7102 /* Eatery+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eatery+ViewModel.swift"; sourceTree = "<group>"; };
 		DD5124E9264CE75E009C7102 /* GeneratedCode */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GeneratedCode; sourceTree = "<group>"; };
 		DD5124EB264CE79F009C7102 /* EateryModel+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EateryModel+ViewModel.swift"; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				DD27D45C264CEC88004B29BC /* Review+ViewModel.swift */,
 				DDF8723C264A6A0300CA757B /* EateriesCoreDataApp.swift */,
 				DDF8723E264A6A0300CA757B /* ContentView.swift */,
+				DD27D45E264CEF8F004B29BC /* MasterView.swift */,
 				DDF87240264A6A0800CA757B /* Assets.xcassets */,
 				DDF87245264A6A0800CA757B /* Persistence.swift */,
 				DDF8724A264A6A0800CA757B /* Info.plist */,
@@ -512,6 +515,7 @@
 			files = (
 				DDF87246264A6A0800CA757B /* Persistence.swift in Sources */,
 				DDF8723F264A6A0300CA757B /* ContentView.swift in Sources */,
+				DD27D45F264CEF8F004B29BC /* MasterView.swift in Sources */,
 				DD27D45D264CEC88004B29BC /* Review+ViewModel.swift in Sources */,
 				DD5124EC264CE79F009C7102 /* EateryModel+ViewModel.swift in Sources */,
 				DDF87249264A6A0800CA757B /* EateriesCoreData.xcdatamodeld in Sources */,

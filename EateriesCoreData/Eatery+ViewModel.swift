@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 extension Eatery {
     /// Non-optional ViewModel image property
@@ -74,5 +75,28 @@ extension Eatery {
         }
     }
     
-    
+    /// Download image from the internet using URL
+    /// - Parameter eateryURL: URL to eatery image
+    /// - Returns: downloaded image
+    func downloadEateryImage (eateryURL: String) -> Image {
+        let emptyImage = Image("blank")
+        
+        // Check input URL -> assign to imageURL
+        guard let imageURL = URL(string: eateryURL) else {
+            return emptyImage // Invalid URL
+        }
+        
+        // Download image -> assign to imageData
+        guard let imageData = try? Data(contentsOf: imageURL) else {
+            return emptyImage // Could not download the image
+        }
+        
+        // Get image from the downloaded data -> assign to uiImage
+        guard let uiImage = UIImage(data: imageData) else {
+            return emptyImage // Downloaded data do not contain an image
+        }
+        
+        // Return image to display on views
+        return Image(uiImage: uiImage)
+    }
 }

@@ -14,20 +14,20 @@ struct MasterView: View {
     
     var body: some View {
         List {
-//            ForEach(eateryModel.eateriesArray) { eatery in
-//                NavigationLink(
-//                    destination: DetailView(eatery: eatery)
-//                        .navigationBarItems(trailing: EditButton()),
-//                    // Eatery item thumbnail
-//                    label: {
-//                        // This view is created to ensure information are updated
-//                        // in MasterView after modifying information in DetailView
-//                        RowView(eatery: eatery)
-//                    })
-//                // Delete a specific eatery
-//            }.onDelete { offsets in
-//                eateryModel.deleteEatery(offsets: offsets)
-//            }
+            ForEach(eateryModel.eateriesArray) { eatery in
+                NavigationLink(
+                    destination: DetailView(eatery: eatery)
+                        .navigationBarItems(trailing: EditButton()),
+                    // Eatery item thumbnail
+                    label: {
+                        // This view is created to ensure information are updated
+                        // in MasterView after modifying information in DetailView
+                        RowView(eatery: eatery)
+                    })
+                // Delete a specific eatery
+            }.onDelete { offsets in
+                eateryModel.deleteEatery(offsets: offsets)
+            }
         }
         .navigationBarTitle("Eateries")
         .navigationBarItems(leading: EditButton(),

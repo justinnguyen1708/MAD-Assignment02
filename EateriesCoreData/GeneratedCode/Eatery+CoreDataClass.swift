@@ -1,6 +1,6 @@
 //
 //  Eatery+CoreDataClass.swift
-//  Eateries
+//  EateriesCoreData
 //
 //  Created by Nguyen Chanh Tin on 5/13/21.
 //

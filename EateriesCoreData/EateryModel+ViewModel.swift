@@ -1,5 +1,5 @@
 //
-//  Eatery+ViewModel.swift
+//  EateryModel+ViewModel.swift
 //  EateriesCoreData
 //
 //  Created by Nguyen Chanh Tin on 5/13/21.
@@ -8,47 +8,25 @@
 import Foundation
 import CoreData
 
-extension Eatery {
-    /// Non-optional ViewModel image property
-    var imageString: String {
-        get {image ?? ""}
-        set {image = newValue}
-    }
-    
-    /// Non-optional ViewModel name property
-    var nameString: String {
-        get {name ?? ""}
-        set {name = newValue}
-    }
-    
-    /// Non-optional ViewModel location property
-    var locationString: String {
-        get {location ?? ""}
-        set {location = newValue}
-    }
-    
-    /// Non-optional ViewModel notes property
-    var notesString: String {
-        get {notes ?? ""}
-        set {notes = newValue}
-    }
-    
-    /// ViewModel computed property that returns reviews as Array
-    var reviewsArray: [Review] {
-        get {reviews?.array as? [Review] ?? []}
-        set {reviews = NSOrderedSet(array: newValue)}
+extension EateryModel {
+    /// ViewModel computed property that returns eateries as Array
+    var eateriesArray: [Eatery] {
+        get {eateries?.array as? [Eatery] ?? []}
+        set {eateries? = NSOrderedSet(array: newValue)}
     }
     
     var viewContext: NSManagedObjectContext {
         managedObjectContext ?? NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     }
     
-    /// Add a new review to reviews
-    func addReview() {
-        let newReview = Review(context: viewContext)
-        newReview.author = ""
-        newReview.comment = ""
-        addToReviews(newReview)
+    /// Add a new eatery to eateries
+    func addEatery() {
+        let newEatery = Eatery(context: viewContext)
+        newEatery.image = "blank"
+        newEatery.name = "<NEW>"
+        newEatery.location = ""
+        newEatery.notes = ""
+        addToEateries(newEatery)
 
         do {
             try viewContext.save()
@@ -60,9 +38,9 @@ extension Eatery {
         }
     }
     
-    /// Delete a review from reviews
-    func deleteReview(offsets: IndexSet) {
-        offsets.map { reviewsArray[$0] }.forEach(viewContext.delete)
+    /// Delete a eatery from eateries
+    func deleteEatery(offsets: IndexSet) {
+        offsets.map { eateriesArray[$0] }.forEach(viewContext.delete)
 
         do {
             try viewContext.save()
@@ -74,5 +52,11 @@ extension Eatery {
         }
     }
     
-    
+    /// Move eatery to specific index
+    /// - Parameters:
+    ///   - indices: indices with specific index to be moved from
+    ///   - destination: destination index
+    func moveEatery (from indices: IndexSet, to destination: Int) {
+        
+    }
 }

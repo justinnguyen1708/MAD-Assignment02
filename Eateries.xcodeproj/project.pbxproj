@@ -18,14 +18,10 @@
 		DD26469B263149FA005761B7 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26469A263149FA005761B7 /* MasterView.swift */; };
 		DD2646A026314A07005761B7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26469F26314A07005761B7 /* DetailView.swift */; };
 		DD2646A526314A13005761B7 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2646A426314A13005761B7 /* RowView.swift */; };
+		DD27D45D264CEC88004B29BC /* Review+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD27D45C264CEC88004B29BC /* Review+ViewModel.swift */; };
 		DD5124A0264CDC8D009C7102 /* Eatery+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD51249F264CDC8D009C7102 /* Eatery+ViewModel.swift */; };
-		DD5124A2264CDF2B009C7102 /* EateryModel+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5124A1264CDF2B009C7102 /* EateryModel+ViewModel.swift */; };
-		DD5124B0264CE0E3009C7102 /* Eatery+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5124AA264CE0E2009C7102 /* Eatery+CoreDataClass.swift */; };
-		DD5124B1264CE0E3009C7102 /* Review+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5124AB264CE0E2009C7102 /* Review+CoreDataClass.swift */; };
-		DD5124B2264CE0E3009C7102 /* Eatery+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5124AC264CE0E2009C7102 /* Eatery+CoreDataProperties.swift */; };
-		DD5124B3264CE0E3009C7102 /* EateryModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5124AD264CE0E2009C7102 /* EateryModel+CoreDataClass.swift */; };
-		DD5124B4264CE0E3009C7102 /* EateryModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5124AE264CE0E2009C7102 /* EateryModel+CoreDataProperties.swift */; };
-		DD5124B5264CE0E3009C7102 /* Review+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5124AF264CE0E2009C7102 /* Review+CoreDataProperties.swift */; };
+		DD5124EA264CE75E009C7102 /* GeneratedCode in Resources */ = {isa = PBXBuildFile; fileRef = DD5124E9264CE75E009C7102 /* GeneratedCode */; };
+		DD5124EC264CE79F009C7102 /* EateryModel+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5124EB264CE79F009C7102 /* EateryModel+ViewModel.swift */; };
 		DDF8723D264A6A0300CA757B /* EateriesCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8723C264A6A0300CA757B /* EateriesCoreDataApp.swift */; };
 		DDF8723F264A6A0300CA757B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8723E264A6A0300CA757B /* ContentView.swift */; };
 		DDF87241264A6A0800CA757B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF87240264A6A0800CA757B /* Assets.xcassets */; };
@@ -85,14 +81,10 @@
 		DD26469A263149FA005761B7 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		DD26469F26314A07005761B7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DD2646A426314A13005761B7 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		DD27D45C264CEC88004B29BC /* Review+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Review+ViewModel.swift"; sourceTree = "<group>"; };
 		DD51249F264CDC8D009C7102 /* Eatery+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eatery+ViewModel.swift"; sourceTree = "<group>"; };
-		DD5124A1264CDF2B009C7102 /* EateryModel+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EateryModel+ViewModel.swift"; sourceTree = "<group>"; };
-		DD5124AA264CE0E2009C7102 /* Eatery+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Eatery+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DD5124AB264CE0E2009C7102 /* Review+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Review+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DD5124AC264CE0E2009C7102 /* Eatery+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Eatery+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DD5124AD264CE0E2009C7102 /* EateryModel+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EateryModel+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DD5124AE264CE0E2009C7102 /* EateryModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EateryModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DD5124AF264CE0E2009C7102 /* Review+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Review+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD5124E9264CE75E009C7102 /* GeneratedCode */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GeneratedCode; sourceTree = "<group>"; };
+		DD5124EB264CE79F009C7102 /* EateryModel+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EateryModel+ViewModel.swift"; sourceTree = "<group>"; };
 		DDF8723A264A6A0200CA757B /* EateriesCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EateriesCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF8723C264A6A0300CA757B /* EateriesCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateriesCoreDataApp.swift; sourceTree = "<group>"; };
 		DDF8723E264A6A0300CA757B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -224,25 +216,13 @@
 			path = EateriesUITests;
 			sourceTree = "<group>";
 		};
-		DD5124A9264CE0E2009C7102 /* GeneratedCode */ = {
-			isa = PBXGroup;
-			children = (
-				DD5124AA264CE0E2009C7102 /* Eatery+CoreDataClass.swift */,
-				DD5124AB264CE0E2009C7102 /* Review+CoreDataClass.swift */,
-				DD5124AC264CE0E2009C7102 /* Eatery+CoreDataProperties.swift */,
-				DD5124AD264CE0E2009C7102 /* EateryModel+CoreDataClass.swift */,
-				DD5124AE264CE0E2009C7102 /* EateryModel+CoreDataProperties.swift */,
-				DD5124AF264CE0E2009C7102 /* Review+CoreDataProperties.swift */,
-			);
-			path = GeneratedCode;
-			sourceTree = "<group>";
-		};
 		DDF8723B264A6A0300CA757B /* EateriesCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				DD5124A9264CE0E2009C7102 /* GeneratedCode */,
+				DD5124E9264CE75E009C7102 /* GeneratedCode */,
 				DD51249F264CDC8D009C7102 /* Eatery+ViewModel.swift */,
-				DD5124A1264CDF2B009C7102 /* EateryModel+ViewModel.swift */,
+				DD5124EB264CE79F009C7102 /* EateryModel+ViewModel.swift */,
+				DD27D45C264CEC88004B29BC /* Review+ViewModel.swift */,
 				DDF8723C264A6A0300CA757B /* EateriesCoreDataApp.swift */,
 				DDF8723E264A6A0300CA757B /* ContentView.swift */,
 				DDF87240264A6A0800CA757B /* Assets.xcassets */,
@@ -473,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD5124EA264CE75E009C7102 /* GeneratedCode in Resources */,
 				DDF87244264A6A0800CA757B /* Preview Assets.xcassets in Resources */,
 				DDF87241264A6A0800CA757B /* Assets.xcassets in Resources */,
 			);
@@ -530,17 +511,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDF87246264A6A0800CA757B /* Persistence.swift in Sources */,
-				DD5124B3264CE0E3009C7102 /* EateryModel+CoreDataClass.swift in Sources */,
-				DD5124B4264CE0E3009C7102 /* EateryModel+CoreDataProperties.swift in Sources */,
 				DDF8723F264A6A0300CA757B /* ContentView.swift in Sources */,
-				DD5124B0264CE0E3009C7102 /* Eatery+CoreDataClass.swift in Sources */,
-				DD5124B1264CE0E3009C7102 /* Review+CoreDataClass.swift in Sources */,
-				DD5124A2264CDF2B009C7102 /* EateryModel+ViewModel.swift in Sources */,
-				DD5124B5264CE0E3009C7102 /* Review+CoreDataProperties.swift in Sources */,
+				DD27D45D264CEC88004B29BC /* Review+ViewModel.swift in Sources */,
+				DD5124EC264CE79F009C7102 /* EateryModel+ViewModel.swift in Sources */,
 				DDF87249264A6A0800CA757B /* EateriesCoreData.xcdatamodeld in Sources */,
 				DDF8723D264A6A0300CA757B /* EateriesCoreDataApp.swift in Sources */,
 				DD5124A0264CDC8D009C7102 /* Eatery+ViewModel.swift in Sources */,
-				DD5124B2264CE0E3009C7102 /* Eatery+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

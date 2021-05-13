@@ -5,21 +5,21 @@
         <attribute name="location" attributeType="String" defaultValueString=""/>
         <attribute name="name" attributeType="String" defaultValueString=""/>
         <attribute name="notes" attributeType="String" defaultValueString=""/>
-        <relationship name="eateryModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EateryModel" inverseName="eatery" inverseEntity="EateryModel"/>
-        <relationship name="review" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Review" inverseName="eatery" inverseEntity="Review"/>
+        <relationship name="eateryModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EateryModel" inverseName="eateries" inverseEntity="EateryModel"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Review" inverseName="eatery" inverseEntity="Review"/>
     </entity>
     <entity name="EateryModel" representedClassName="EateryModel" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" defaultValueString=""/>
-        <relationship name="eatery" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Eatery" inverseName="eateryModel" inverseEntity="Eatery"/>
+        <relationship name="eateries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Eatery" inverseName="eateryModel" inverseEntity="Eatery"/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>
         <attribute name="comment" optional="YES" attributeType="String"/>
-        <relationship name="eatery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eatery" inverseName="review" inverseEntity="Eatery"/>
+        <relationship name="eatery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eatery" inverseName="reviews" inverseEntity="Eatery"/>
     </entity>
     <elements>
         <element name="Eatery" positionX="-190.9110717773438" positionY="-122.4865417480469" width="128" height="133"/>
-        <element name="Review" positionX="13.80535888671875" positionY="-188.6468200683594" width="128" height="88"/>
         <element name="EateryModel" positionX="-392.5572509765625" positionY="-143.8466796875" width="128" height="73"/>
+        <element name="Review" positionX="13.80535888671875" positionY="-188.6468200683594" width="128" height="88"/>
     </elements>
 </model>

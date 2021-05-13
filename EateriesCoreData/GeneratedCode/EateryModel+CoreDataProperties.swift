@@ -1,6 +1,6 @@
 //
 //  EateryModel+CoreDataProperties.swift
-//  Eateries
+//  EateriesCoreData
 //
 //  Created by Nguyen Chanh Tin on 5/13/21.
 //
@@ -17,42 +17,42 @@ extension EateryModel {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var eatery: NSOrderedSet?
+    @NSManaged public var eateries: NSOrderedSet?
 
 }
 
-// MARK: Generated accessors for eatery
+// MARK: Generated accessors for eateries
 extension EateryModel {
 
-    @objc(insertObject:inEateryAtIndex:)
-    @NSManaged public func insertIntoEatery(_ value: Eatery, at idx: Int)
+    @objc(insertObject:inEateriesAtIndex:)
+    @NSManaged public func insertIntoEateries(_ value: Eatery, at idx: Int)
 
-    @objc(removeObjectFromEateryAtIndex:)
-    @NSManaged public func removeFromEatery(at idx: Int)
+    @objc(removeObjectFromEateriesAtIndex:)
+    @NSManaged public func removeFromEateries(at idx: Int)
 
-    @objc(insertEatery:atIndexes:)
-    @NSManaged public func insertIntoEatery(_ values: [Eatery], at indexes: NSIndexSet)
+    @objc(insertEateries:atIndexes:)
+    @NSManaged public func insertIntoEateries(_ values: [Eatery], at indexes: NSIndexSet)
 
-    @objc(removeEateryAtIndexes:)
-    @NSManaged public func removeFromEatery(at indexes: NSIndexSet)
+    @objc(removeEateriesAtIndexes:)
+    @NSManaged public func removeFromEateries(at indexes: NSIndexSet)
 
-    @objc(replaceObjectInEateryAtIndex:withObject:)
-    @NSManaged public func replaceEatery(at idx: Int, with value: Eatery)
+    @objc(replaceObjectInEateriesAtIndex:withObject:)
+    @NSManaged public func replaceEateries(at idx: Int, with value: Eatery)
 
-    @objc(replaceEateryAtIndexes:withEatery:)
-    @NSManaged public func replaceEatery(at indexes: NSIndexSet, with values: [Eatery])
+    @objc(replaceEateriesAtIndexes:withEateries:)
+    @NSManaged public func replaceEateries(at indexes: NSIndexSet, with values: [Eatery])
 
-    @objc(addEateryObject:)
-    @NSManaged public func addToEatery(_ value: Eatery)
+    @objc(addEateriesObject:)
+    @NSManaged public func addToEateries(_ value: Eatery)
 
-    @objc(removeEateryObject:)
-    @NSManaged public func removeFromEatery(_ value: Eatery)
+    @objc(removeEateriesObject:)
+    @NSManaged public func removeFromEateries(_ value: Eatery)
 
-    @objc(addEatery:)
-    @NSManaged public func addToEatery(_ values: NSOrderedSet)
+    @objc(addEateries:)
+    @NSManaged public func addToEateries(_ values: NSOrderedSet)
 
-    @objc(removeEatery:)
-    @NSManaged public func removeFromEatery(_ values: NSOrderedSet)
+    @objc(removeEateries:)
+    @NSManaged public func removeFromEateries(_ values: NSOrderedSet)
 
 }
 

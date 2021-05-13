@@ -1,6 +1,6 @@
 //
 //  Eatery+CoreDataProperties.swift
-//  Eateries
+//  EateriesCoreData
 //
 //  Created by Nguyen Chanh Tin on 5/13/21.
 //
@@ -16,47 +16,47 @@ extension Eatery {
         return NSFetchRequest<Eatery>(entityName: "Eatery")
     }
 
-    @NSManaged public var notes: String?
     @NSManaged public var image: String?
-    @NSManaged public var name: String?
     @NSManaged public var location: String?
-    @NSManaged public var review: NSOrderedSet?
+    @NSManaged public var name: String?
+    @NSManaged public var notes: String?
     @NSManaged public var eateryModel: EateryModel?
+    @NSManaged public var reviews: NSOrderedSet?
 
 }
 
-// MARK: Generated accessors for review
+// MARK: Generated accessors for reviews
 extension Eatery {
 
-    @objc(insertObject:inReviewAtIndex:)
-    @NSManaged public func insertIntoReview(_ value: Review, at idx: Int)
+    @objc(insertObject:inReviewsAtIndex:)
+    @NSManaged public func insertIntoReviews(_ value: Review, at idx: Int)
 
-    @objc(removeObjectFromReviewAtIndex:)
-    @NSManaged public func removeFromReview(at idx: Int)
+    @objc(removeObjectFromReviewsAtIndex:)
+    @NSManaged public func removeFromReviews(at idx: Int)
 
-    @objc(insertReview:atIndexes:)
-    @NSManaged public func insertIntoReview(_ values: [Review], at indexes: NSIndexSet)
+    @objc(insertReviews:atIndexes:)
+    @NSManaged public func insertIntoReviews(_ values: [Review], at indexes: NSIndexSet)
 
-    @objc(removeReviewAtIndexes:)
-    @NSManaged public func removeFromReview(at indexes: NSIndexSet)
+    @objc(removeReviewsAtIndexes:)
+    @NSManaged public func removeFromReviews(at indexes: NSIndexSet)
 
-    @objc(replaceObjectInReviewAtIndex:withObject:)
-    @NSManaged public func replaceReview(at idx: Int, with value: Review)
+    @objc(replaceObjectInReviewsAtIndex:withObject:)
+    @NSManaged public func replaceReviews(at idx: Int, with value: Review)
 
-    @objc(replaceReviewAtIndexes:withReview:)
-    @NSManaged public func replaceReview(at indexes: NSIndexSet, with values: [Review])
+    @objc(replaceReviewsAtIndexes:withReviews:)
+    @NSManaged public func replaceReviews(at indexes: NSIndexSet, with values: [Review])
 
-    @objc(addReviewObject:)
-    @NSManaged public func addToReview(_ value: Review)
+    @objc(addReviewsObject:)
+    @NSManaged public func addToReviews(_ value: Review)
 
-    @objc(removeReviewObject:)
-    @NSManaged public func removeFromReview(_ value: Review)
+    @objc(removeReviewsObject:)
+    @NSManaged public func removeFromReviews(_ value: Review)
 
-    @objc(addReview:)
-    @NSManaged public func addToReview(_ values: NSOrderedSet)
+    @objc(addReviews:)
+    @NSManaged public func addToReviews(_ values: NSOrderedSet)
 
-    @objc(removeReview:)
-    @NSManaged public func removeFromReview(_ values: NSOrderedSet)
+    @objc(removeReviews:)
+    @NSManaged public func removeFromReviews(_ values: NSOrderedSet)
 
 }
 

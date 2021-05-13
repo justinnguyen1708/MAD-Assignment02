@@ -10,7 +10,7 @@
     </entity>
     <entity name="EateryModel" representedClassName="EateryModel" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" defaultValueString=""/>
-        <relationship name="eatery" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Eatery" inverseName="eateryModel" inverseEntity="Eatery"/>
+        <relationship name="eatery" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Eatery" inverseName="eateryModel" inverseEntity="Eatery"/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>

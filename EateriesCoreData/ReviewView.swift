@@ -14,14 +14,14 @@ struct ReviewView: View {
     
     var body: some View {
         HStack {
-            TextField("Author", text: $review.authorString, onCommit: {
+            TextField("Enter Author", text: $review.authorString, onCommit: {
                 try?viewContext.save()
             })
             .font(.body)
             .frame(width: 50.0)
             Spacer()
                 .frame(width: 50.0)
-            TextField("Comment", text: $review.commentString, onCommit: {
+            TextField("Enter Comment", text: $review.commentString, onCommit: {
                 try?viewContext.save()
             })
             .font(.body)

@@ -18,15 +18,15 @@ struct DetailView: View {
         List {
             if editMode?.wrappedValue == .active {
                 HStack {
-                    TextField("Eatery image", text: $eatery.imageString, onCommit: {
+                    TextField("Enter Image URL", text: $eatery.imageString, onCommit: {
                         try?viewContext.save()
                     })
                 }
                 // Eatery title, description and story are shown in this section
-                Section(header: TextField("Name", text: $eatery.nameString, onCommit: {
+                Section(header: TextField("Enter Name", text: $eatery.nameString, onCommit: {
                     try?viewContext.save()
                 })){
-                    TextField("Location", text: $eatery.locationString, onCommit: {
+                    TextField("Enter Location", text: $eatery.locationString, onCommit: {
                         try?viewContext.save()
                     })
                 }
@@ -42,7 +42,7 @@ struct DetailView: View {
                 // Reviews section
                 Section (header: HStack{
                     Text("REVIEWS")
-
+                    Spacer()
                     Button(action: {
                         withAnimation{
                             eatery.addReview()

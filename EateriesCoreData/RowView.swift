@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RowView: View {
     @ObservedObject var eatery: Eatery
+    
     var body: some View {
         HStack {
             // Image of the eatery

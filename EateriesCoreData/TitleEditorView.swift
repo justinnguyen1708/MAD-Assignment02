@@ -17,14 +17,12 @@ struct TitleEditorView: View {
     var body: some View {
         VStack {
             if editMode?.wrappedValue == .active {
-                HStack() {
+                HStack {
                     Text("✏️").font(Font.system(.largeTitle).bold())
                     TextField("Enter Title", text: $eateryModel.nameString, onCommit: {
                         try?viewContext.save()
                     }).font(Font.system(.largeTitle).bold())
                 }
-                .padding(.leading, 10.0)
-                .padding(.top, -40.0) 
             }
         }.navigationTitle(editMode?.wrappedValue == .active ? "" : eateryModel.nameString)
     }

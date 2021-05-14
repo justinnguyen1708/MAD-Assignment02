@@ -63,7 +63,9 @@ struct DetailView: View {
                     }
                 }.onDelete { offsets in
                     eatery.deleteReview(offsets: offsets)
-                }
+                }.onMove(perform: { indices, newOffset in
+                    eatery.moveReview(from: indices, to: newOffset)
+                })
             }
         }
     }

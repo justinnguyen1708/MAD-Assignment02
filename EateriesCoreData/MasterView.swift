@@ -27,9 +27,11 @@ struct MasterView: View {
                 // Delete a specific eatery
             }.onDelete { offsets in
                 eateryModel.deleteEatery(offsets: offsets)
-            }
+            }.onMove(perform: { indices, newOffset in
+                eateryModel.moveEatery(from: indices, to: newOffset)
+            })
         }
-        .navigationBarTitle("Eateries")
+        .navigationBarTitle(eateryModel.nameString)
         .navigationBarItems(leading: EditButton(),
                              trailing: Button(action: {
                                  withAnimation{

@@ -75,6 +75,23 @@ extension Eatery {
         }
     }
     
+    /// Move review to specific index
+    /// - Parameters:
+    ///   - indices: indices with specific index to be moved from
+    ///   - destination: destination index
+    func moveReview (from indices: IndexSet, to destination: Int) {
+        reviewsArray.move(fromOffsets: indices, toOffset: destination)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
     /// Download image from the internet using URL
     /// - Parameter eateryURL: URL to eatery image
     /// - Returns: downloaded image

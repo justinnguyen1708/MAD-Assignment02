@@ -26,9 +26,7 @@ struct DetailView: View {
                 Section(header: TextField("Enter Name", text: $eatery.nameString, onCommit: {
                     try?viewContext.save()
                 })){
-//                    TextField("Enter Location", text: $eatery.locationString, onCommit: {
-//                        try?viewContext.save()
-//                    })
+                    Text(eatery.locationObject.nameString)
                 }
                 
                 // Notes section
@@ -74,8 +72,10 @@ struct DetailView: View {
                             .font(.largeTitle)
                             .fontWeight(.medium)
                 ){
-//                    Text(eatery.locationString)
-//                        .font(.body)
+                    NavigationLink(destination: LocationView(location: eatery.locationObject)) {
+                        Text(eatery.locationObject.nameString)
+                            .font(.body)
+                    }
                 }
                 
                 // Notes section

@@ -22,11 +22,11 @@ extension Eatery {
         set {name = newValue}
     }
     
-    /// Non-optional ViewModel location property
-//    var locationString: String {
-//        get {location ?? ""}
-//        set {location = newValue}
-//    }
+    /// ViewModel computed property that returns reviews as Object
+    var locationObject: Location {
+        get {location ?? Location(context: viewContext)}
+        set {location = newValue}
+    }
     
     /// Non-optional ViewModel notes property
     var notesString: String {

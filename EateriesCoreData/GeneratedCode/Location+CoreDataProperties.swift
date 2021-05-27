@@ -16,11 +16,12 @@ extension Location {
         return NSFetchRequest<Location>(entityName: "Location")
     }
 
-    @NSManaged public var name: String?
-    @NSManaged public var longitude: Double
     @NSManaged public var latitude: Double
+    @NSManaged public var latitudeSpan: Double
+    @NSManaged public var longitude: Double
+    @NSManaged public var longitudeSpan: Double
+    @NSManaged public var name: String?
     @NSManaged public var eatery: Eatery?
-    @NSManaged public var locationModel: LocationModel?
 
 }
 

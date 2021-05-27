@@ -15,6 +15,9 @@ struct LocationView: View {
     var body: some View {
         VStack {
             VStack {
+                Text("Location")
+                    .font(.largeTitle)
+                    .fontWeight(.medium)
                 MapView(location: location)
             }.padding()
             

@@ -20,8 +20,8 @@ extension Eatery {
     @NSManaged public var name: String?
     @NSManaged public var notes: String?
     @NSManaged public var eateryModel: EateryModel?
-    @NSManaged public var reviews: NSOrderedSet?
     @NSManaged public var location: Location?
+    @NSManaged public var reviews: NSOrderedSet?
 
 }
 

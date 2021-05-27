@@ -5,12 +5,20 @@
 //  Created by Nguyen Chanh Tin on 5/27/21.
 //
 
+import MapKit
+import UIKit
 import SwiftUI
 
-struct MapView: View {
+struct MapView: UIViewRepresentable {
     @ObservedObject var location: Location
     
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    func makeUIView(context: Context) -> MKMapView {
+        let mapView = MKMapView(frame: .zero)
+        mapView.delegate = location
+        return mapView
+    }
+    
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+        uiView.setRegion(location.region, animated: true)
     }
 }

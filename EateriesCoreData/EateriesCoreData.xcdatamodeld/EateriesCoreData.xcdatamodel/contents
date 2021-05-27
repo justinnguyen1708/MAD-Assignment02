@@ -2,15 +2,27 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Eatery" representedClassName="Eatery" syncable="YES" codeGenerationType="class">
         <attribute name="image" attributeType="String" defaultValueString=""/>
-        <attribute name="location" attributeType="String" defaultValueString=""/>
         <attribute name="name" attributeType="String" defaultValueString=""/>
         <attribute name="notes" attributeType="String" defaultValueString=""/>
         <relationship name="eateryModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EateryModel" inverseName="eateries" inverseEntity="EateryModel"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="eatery" inverseEntity="Location"/>
         <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Review" inverseName="eatery" inverseEntity="Review"/>
     </entity>
     <entity name="EateryModel" representedClassName="EateryModel" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" defaultValueString=""/>
         <relationship name="eateries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Eatery" inverseName="eateryModel" inverseEntity="Eatery"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="eatery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eatery" inverseName="location" inverseEntity="Eatery"/>
+        <relationship name="locationModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationModel" inverseName="location" inverseEntity="LocationModel"/>
+    </entity>
+    <entity name="LocationModel" representedClassName="LocationModel" syncable="YES" codeGenerationType="class">
+        <attribute name="latitudeSpan" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitudeSpan" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationModel" inverseEntity="Location"/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>
@@ -18,8 +30,10 @@
         <relationship name="eatery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eatery" inverseName="reviews" inverseEntity="Eatery"/>
     </entity>
     <elements>
-        <element name="Eatery" positionX="-190.9110717773438" positionY="-122.4865417480469" width="128" height="133"/>
+        <element name="Eatery" positionX="-190.9110717773438" positionY="-122.4865417480469" width="128" height="119"/>
         <element name="EateryModel" positionX="-392.5572509765625" positionY="-143.8466796875" width="128" height="73"/>
         <element name="Review" positionX="13.80535888671875" positionY="-188.6468200683594" width="128" height="88"/>
+        <element name="Location" positionX="-189" positionY="-99" width="128" height="104"/>
+        <element name="LocationModel" positionX="-180" positionY="-90" width="128" height="74"/>
     </elements>
 </model>

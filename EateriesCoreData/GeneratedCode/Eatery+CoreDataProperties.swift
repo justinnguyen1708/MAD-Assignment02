@@ -2,7 +2,7 @@
 //  Eatery+CoreDataProperties.swift
 //  EateriesCoreData
 //
-//  Created by Nguyen Chanh Tin on 5/13/21.
+//  Created by Nguyen Chanh Tin on 5/27/21.
 //
 //
 
@@ -17,11 +17,11 @@ extension Eatery {
     }
 
     @NSManaged public var image: String?
-    @NSManaged public var location: String?
     @NSManaged public var name: String?
     @NSManaged public var notes: String?
     @NSManaged public var eateryModel: EateryModel?
     @NSManaged public var reviews: NSOrderedSet?
+    @NSManaged public var location: Location?
 
 }
 

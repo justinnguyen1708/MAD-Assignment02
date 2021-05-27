@@ -23,10 +23,10 @@ extension Eatery {
     }
     
     /// Non-optional ViewModel location property
-    var locationString: String {
-        get {location ?? ""}
-        set {location = newValue}
-    }
+//    var locationString: String {
+//        get {location ?? ""}
+//        set {location = newValue}
+//    }
     
     /// Non-optional ViewModel notes property
     var notesString: String {

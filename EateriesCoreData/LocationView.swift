@@ -13,8 +13,32 @@ struct LocationView: View {
     @ObservedObject var location: Location
     
     var body: some View {
-        Text(location.nameString)
-        Text(location.latitudeString)
-        Text(location.longitudeString)
+        VStack {
+            VStack {
+                MapView(location: location)
+            }.padding()
+            
+            VStack {
+                TextField("Enter name", text: $location.nameString)
+                HStack {
+                    Text("Latitude:     ")
+                    TextField("Enter latitude", text: $location.latitudeString, onCommit: {
+                        location.lookupName()
+                    })
+                }
+                
+                HStack {
+                    Text("Longitude: ")
+                    TextField("Enter longitude", text: $location.longitudeString, onCommit: {
+                        location.lookupName()
+                    })
+                        
+                }
+                
+                Button("Find coordinates for location name", action: {
+                    location.lookupPosition()
+                })
+            }.padding()
+        }
     }
 }

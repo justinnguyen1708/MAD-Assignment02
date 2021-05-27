@@ -26,6 +26,9 @@ struct DetailView: View {
                 Section(header: TextField("Enter Name", text: $eatery.nameString, onCommit: {
                     try?viewContext.save()
                 })){
+//                    TextField("Enter Location", text: $eatery.locationObject.nameString, onCommit: {
+//                        eatery.locationObject.lookupName()
+//                    })
                     Text(eatery.locationObject.nameString)
                 }
                 
@@ -72,10 +75,11 @@ struct DetailView: View {
                             .font(.largeTitle)
                             .fontWeight(.medium)
                 ){
-                    NavigationLink(destination: LocationView(location: eatery.locationObject)) {
-                        Text(eatery.locationObject.nameString)
-                            .font(.body)
-                    }
+                    NavigationLink(
+                        destination: LocationView(location: eatery.locationObject),
+                        label: {
+                            LocationNameView(location: eatery.locationObject)
+                    })
                 }
                 
                 // Notes section
@@ -104,8 +108,10 @@ struct DetailView: View {
     }
 }
 
-//struct DetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailView()
-//    }
-//}
+struct LocationNameView: View {
+    @ObservedObject var location: Location
+    
+    var body: some View {
+        Text(location.nameString)
+    }
+}

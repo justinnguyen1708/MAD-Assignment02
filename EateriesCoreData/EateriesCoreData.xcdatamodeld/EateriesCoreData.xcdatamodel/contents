@@ -13,15 +13,15 @@
         <relationship name="eateries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Eatery" inverseName="eateryModel" inverseEntity="Eatery"/>
     </entity>
     <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
-        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
         <relationship name="eatery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eatery" inverseName="location" inverseEntity="Eatery"/>
         <relationship name="locationModel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationModel" inverseName="location" inverseEntity="LocationModel"/>
     </entity>
     <entity name="LocationModel" representedClassName="LocationModel" syncable="YES" codeGenerationType="class">
-        <attribute name="latitudeSpan" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="longitudeSpan" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="latitudeSpan" attributeType="Float" defaultValueString="0.1" usesScalarValueType="YES"/>
+        <attribute name="longitudeSpan" attributeType="Float" defaultValueString="0.1" usesScalarValueType="YES"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="locationModel" inverseEntity="Location"/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES" codeGenerationType="class">
@@ -31,9 +31,9 @@
     </entity>
     <elements>
         <element name="Eatery" positionX="-190.9110717773438" positionY="-122.4865417480469" width="128" height="119"/>
-        <element name="EateryModel" positionX="-392.5572509765625" positionY="-143.8466796875" width="128" height="73"/>
+        <element name="EateryModel" positionX="-206.7570190429688" positionY="80.54470825195312" width="128" height="73"/>
         <element name="Review" positionX="13.80535888671875" positionY="-188.6468200683594" width="128" height="88"/>
-        <element name="Location" positionX="-189" positionY="-99" width="128" height="104"/>
-        <element name="LocationModel" positionX="-180" positionY="-90" width="128" height="74"/>
+        <element name="Location" positionX="-616.7325439453125" positionY="-169.7801208496094" width="128" height="118"/>
+        <element name="LocationModel" positionX="-278.277587890625" positionY="-265.5631866455078" width="128" height="88"/>
     </elements>
 </model>

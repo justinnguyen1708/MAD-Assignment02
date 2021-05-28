@@ -34,6 +34,7 @@
 		DD7F8F63265F604A0055EB6C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7F8F62265F604A0055EB6C /* CoreLocation.framework */; };
 		DD7F8F65265F635F0055EB6C /* Location+CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7F8F64265F635F0055EB6C /* Location+CoreLocation.swift */; };
 		DD7F8F67265F6D5A0055EB6C /* Location+MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7F8F66265F6D5A0055EB6C /* Location+MapKit.swift */; };
+		DD7F8F7B26607CE50055EB6C /* LocationNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7F8F7A26607CE50055EB6C /* LocationNameView.swift */; };
 		DDF8723D264A6A0300CA757B /* EateriesCoreDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8723C264A6A0300CA757B /* EateriesCoreDataApp.swift */; };
 		DDF8723F264A6A0300CA757B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8723E264A6A0300CA757B /* ContentView.swift */; };
 		DDF87241264A6A0800CA757B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF87240264A6A0800CA757B /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		DD7F8F62265F604A0055EB6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DD7F8F64265F635F0055EB6C /* Location+CoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreLocation.swift"; sourceTree = "<group>"; };
 		DD7F8F66265F6D5A0055EB6C /* Location+MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+MapKit.swift"; sourceTree = "<group>"; };
+		DD7F8F7A26607CE50055EB6C /* LocationNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNameView.swift; sourceTree = "<group>"; };
 		DDF8723A264A6A0200CA757B /* EateriesCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EateriesCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF8723C264A6A0300CA757B /* EateriesCoreDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateriesCoreDataApp.swift; sourceTree = "<group>"; };
 		DDF8723E264A6A0300CA757B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -267,10 +269,11 @@
 				DD27D466264E3340004B29BC /* TitleEditorView.swift */,
 				DD27D45E264CEF8F004B29BC /* MasterView.swift */,
 				DD27D460264CF3F7004B29BC /* DetailView.swift */,
+				DD27D462264CF458004B29BC /* RowView.swift */,
 				DD7F8F3B265F48D60055EB6C /* LocationView.swift */,
+				DD7F8F7A26607CE50055EB6C /* LocationNameView.swift */,
 				DD7F8F39265F48A70055EB6C /* MapView.swift */,
 				DD27D464264E1403004B29BC /* ReviewView.swift */,
-				DD27D462264CF458004B29BC /* RowView.swift */,
 				DDF87240264A6A0800CA757B /* Assets.xcassets */,
 				DDF87245264A6A0800CA757B /* Persistence.swift */,
 				DDF8724A264A6A0800CA757B /* Info.plist */,
@@ -562,6 +565,7 @@
 				DDF8723F264A6A0300CA757B /* ContentView.swift in Sources */,
 				DD7F8F3A265F48A70055EB6C /* MapView.swift in Sources */,
 				DD7F8F67265F6D5A0055EB6C /* Location+MapKit.swift in Sources */,
+				DD7F8F7B26607CE50055EB6C /* LocationNameView.swift in Sources */,
 				DD27D45F264CEF8F004B29BC /* MasterView.swift in Sources */,
 				DD27D45D264CEC88004B29BC /* Review+ViewModel.swift in Sources */,
 				DD5124EC264CE79F009C7102 /* EateryModel+ViewModel.swift in Sources */,

@@ -31,6 +31,7 @@ extension EateryModel {
         newEatery.image = "blank"
         newEatery.name = "<NEW>"
         newEatery.notes = ""
+        newEatery.location = Location(context: viewContext)
         addToEateries(newEatery)
 
         do {

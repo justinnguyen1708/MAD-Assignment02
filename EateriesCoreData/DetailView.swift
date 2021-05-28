@@ -26,10 +26,9 @@ struct DetailView: View {
                 Section(header: TextField("Enter Name", text: $eatery.nameString, onCommit: {
                     try?viewContext.save()
                 })){
-//                    TextField("Enter Location", text: $eatery.locationObject.nameString, onCommit: {
-//                        eatery.locationObject.lookupName()
-//                    })
-                    Text(eatery.locationObject.nameString)
+                    TextField("Enter Location", text: $eatery.locationObject.nameString, onCommit: {
+                        eatery.locationObject.lookupPosition()
+                          })
                 }
                 
                 // Notes section
@@ -105,13 +104,5 @@ struct DetailView: View {
                 }
             }
         }
-    }
-}
-
-struct LocationNameView: View {
-    @ObservedObject var location: Location
-    
-    var body: some View {
-        Text(location.nameString)
     }
 }

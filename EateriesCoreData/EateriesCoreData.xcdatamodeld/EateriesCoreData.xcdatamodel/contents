@@ -13,11 +13,11 @@
         <relationship name="eateries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Eatery" inverseName="eateryModel" inverseEntity="Eatery"/>
     </entity>
     <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
-        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="latitudeSpan" attributeType="Double" defaultValueString="0.1" usesScalarValueType="YES"/>
-        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="longitudeSpan" attributeType="Double" defaultValueString="0.1" usesScalarValueType="YES"/>
-        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="name" attributeType="String" defaultValueString="&lt;unknown&gt;"/>
         <relationship name="eatery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eatery" inverseName="location" inverseEntity="Eatery"/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES" codeGenerationType="class">
@@ -28,7 +28,7 @@
     <elements>
         <element name="Eatery" positionX="-190.9110717773438" positionY="-122.4865417480469" width="128" height="119"/>
         <element name="EateryModel" positionX="-206.7570190429688" positionY="80.54470825195312" width="128" height="73"/>
-        <element name="Location" positionX="-616.7325439453125" positionY="-169.7801208496094" width="128" height="133"/>
+        <element name="Location" positionX="-616.7325439453125" positionY="-169.7801208496094" width="128" height="119"/>
         <element name="Review" positionX="13.80535888671875" positionY="-188.6468200683594" width="128" height="88"/>
     </elements>
 </model>

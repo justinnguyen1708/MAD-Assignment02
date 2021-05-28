@@ -29,9 +29,3 @@ struct ReviewView: View {
         }
     }
 }
-
-//struct ReviewView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ReviewView()
-//    }
-//}

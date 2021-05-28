@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import SwiftUI
+
 @testable import EateriesCoreData
 
 class EateriesCoreDataTests: XCTestCase {
@@ -18,16 +20,40 @@ class EateriesCoreDataTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    /// Test downloading image using invalid image
+    func testDownloadEateryImageInvalid() throws {
+        // Eatery object for testing
+        let eateryToTest = Eatery()
+        
+        // URL for testing
+        let urlToTest = "abc"
+        
+        // Name of blank image
+        let blank = "blank"
+        
+        // Download image using invalid url
+        let image = eateryToTest.downloadEateryImage(eateryURL: urlToTest)
+        
+        // Check whether food image is set to blank due to invalid url
+        XCTAssertEqual(image, Image(blank))
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    /// Test downloading image using valid image
+    func testDownloadEateryImageValid() throws {
+        // Eatery object for testing
+        let eateryToTest = Eatery()
+        
+        // URL for testing
+        let urlToTest = "https://www.visitbrisbane.com.au/~/media/choose/convention-bureau/news/boomboomroomrefurb_20201209_wide.ashx"
+        
+        // Name of blank image
+        let blank = "blank"
+        
+        // Download image using invalid url
+        let image = eateryToTest.downloadEateryImage(eateryURL: urlToTest)
+        
+        // Check whether food image is set to blank due to invalid url
+        XCTAssertNotEqual(image, Image(blank))
     }
 
 }

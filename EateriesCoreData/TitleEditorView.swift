@@ -27,9 +27,3 @@ struct TitleEditorView: View {
         }.navigationTitle(editMode?.wrappedValue == .active ? "" : eateryModel.nameString)
     }
 }
-
-//struct TitleEditorView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TitleEditorView()
-//    }
-//}

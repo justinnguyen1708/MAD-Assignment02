@@ -2,7 +2,7 @@
 //  EateryModel+CoreDataProperties.swift
 //  EateriesCoreData
 //
-//  Created by Nguyen Chanh Tin on 5/27/21.
+//  Created by Nguyen Chanh Tin on 5/28/21.
 //
 //
 

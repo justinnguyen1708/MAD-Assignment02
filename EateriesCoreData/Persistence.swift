@@ -9,11 +9,11 @@ import CoreData
 
 struct PersistenceController {
     static var shared: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
+        let result = PersistenceController(inMemory: false)
         let viewContext = result.container.viewContext
         let eateryModel = EateryModel(context: viewContext)
         eateryModel.name = "Best eateries"
-        
+
         let firstEatery = Eatery(context: viewContext)
         firstEatery.image = "https://www.visitbrisbane.com.au/~/media/articles/2021/february/coppaspuntinopasta_20210223_wide.ashx"
         firstEatery.name = "Coppa Spuntino"
@@ -25,9 +25,9 @@ COPPA brings Italian flavours and flair to the table with indoor and alfresco sp
         firstEatery.locationObject.name = "Brisbane"
         firstEatery.locationObject.lookupPosition()
         firstEatery.addReview()
-        
+
         eateryModel.addToEateries(firstEatery)
-        
+
         let secondEatery = Eatery(context: viewContext)
         secondEatery.image = "https://www.visitbrisbane.com.au/~/media/inner-city/the-city/2020/bars/citywinery720x405.ashx"
         secondEatery.name = "City Winery"
@@ -39,9 +39,9 @@ One of three inner-city wineries in Australia, drinkers will be able to enjoy ta
         secondEatery.locationObject.name = "Brisbane"
         secondEatery.locationObject.lookupPosition()
         secondEatery.addReview()
-        
+
         eateryModel.addToEateries(secondEatery)
-        
+
         let thirdEatery = Eatery(context: viewContext)
         thirdEatery.image = "https://www.visitbrisbane.com.au/~/media/articles/2021/march/bisou.ashx"
         thirdEatery.name = "Bisou Bisou"
@@ -56,9 +56,9 @@ We’ll take the plat du jour, s’il vous plait.
         thirdEatery.locationObject.name = "Brisbane"
         thirdEatery.locationObject.lookupPosition()
         thirdEatery.addReview()
-        
+
         eateryModel.addToEateries(thirdEatery)
-        
+
         let fourthEatery = Eatery(context: viewContext)
         fourthEatery.image = "https://www.visitbrisbane.com.au/~/media/choose/convention-bureau/news/boomboomroomrefurb_20201209_wide.ashx"
         fourthEatery.name = "Boom Boom Room Izakaya"
@@ -70,7 +70,7 @@ There’s plenty of Japanese-inspired eats to share and stunning cocktails still
         fourthEatery.locationObject.name = "Brisbane"
         fourthEatery.locationObject.lookupPosition()
         fourthEatery.addReview()
-        
+
         eateryModel.addToEateries(fourthEatery)
         do {
             try viewContext.save()
@@ -89,11 +89,6 @@ There’s plenty of Japanese-inspired eats to share and stunning cocktails still
         let eateryModel = EateryModel(context: viewContext)
         eateryModel.name = "Best eateries"
         for i in 0...3 {
-            let eatery = Eatery(context: viewContext)
-            eatery.name = "Eatery #\(i)"
-            eatery.image = "blank"
-            eatery.location = Location(context: viewContext)
-            eatery.notes = ""
             eateryModel.addEatery()
         }
         do {

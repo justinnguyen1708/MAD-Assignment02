@@ -19,16 +19,20 @@ struct LocationView: View {
             }.padding()
             
             VStack {
-                TextField("Enter name", text: $location.nameString)
                 HStack {
-                    Text("Latitude:\t")
+                    Text("Name:\t\t").fontWeight(.bold)
+                    TextField("Enter name", text: $location.nameString)
+                }
+                
+                HStack {
+                    Text("Latitude:\t").fontWeight(.bold)
                     TextField("Enter latitude", text: $location.latitudeString, onCommit: {
                         location.lookupName()
                     })
                 }
                 
                 HStack {
-                    Text("Longitude:\t")
+                    Text("Longitude:").fontWeight(.bold)
                     TextField("Enter longitude", text: $location.longitudeString, onCommit: {
                         location.lookupName()
                     })

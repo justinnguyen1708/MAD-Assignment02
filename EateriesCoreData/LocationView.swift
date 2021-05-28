@@ -15,33 +15,29 @@ struct LocationView: View {
     var body: some View {
         VStack {
             VStack {
-                Text("Location")
-                    .font(.largeTitle)
-                    .fontWeight(.medium)
                 MapView(location: location)
             }.padding()
             
             VStack {
                 TextField("Enter name", text: $location.nameString)
                 HStack {
-                    Text("Latitude:     ")
+                    Text("Latitude:\t")
                     TextField("Enter latitude", text: $location.latitudeString, onCommit: {
                         location.lookupName()
                     })
                 }
                 
                 HStack {
-                    Text("Longitude: ")
+                    Text("Longitude:\t")
                     TextField("Enter longitude", text: $location.longitudeString, onCommit: {
                         location.lookupName()
                     })
-                        
                 }
                 
                 Button("Find coordinates for location name", action: {
                     location.lookupPosition()
                 })
             }.padding()
-        }
+        }.navigationTitle("Location")
     }
 }

@@ -11,10 +11,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in variable initialization expression of static EateriesApp.eateryViewModel:EateriesApp.swift">
+         contextName = "closure #1 in EateriesCoreDataApp.body.getter:EateriesCoreDataApp.swift">
          <PersistentStrings>
             <PersistentString
-               value = "fileURL">
+               value = "persistenceController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -27,6 +27,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "static EateriesCoreDataApp.$main():EateriesCoreDataApp.swift">
+      </ContextState>
+      <ContextState
          contextName = "static EateriesApp.fileURL.getter:EateriesApp.swift">
       </ContextState>
       <ContextState
@@ -37,6 +40,14 @@
             </PersistentString>
             <PersistentString
                value = "listOfEateries">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in variable initialization expression of static EateriesApp.eateryViewModel:EateriesApp.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileURL">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

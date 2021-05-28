@@ -47,8 +47,8 @@ extension Eatery {
     /// Add a new review to reviews
     func addReview() {
         let newReview = Review(context: viewContext)
-        newReview.author = ""
-        newReview.comment = ""
+        newReview.author = "Reviewer"
+        newReview.comment = "Comment"
         addToReviews(newReview)
 
         do {

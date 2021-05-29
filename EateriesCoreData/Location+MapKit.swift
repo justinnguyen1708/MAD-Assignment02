@@ -10,6 +10,7 @@ import MapKit
 private var updateCount = 0
 
 extension Location: MKMapViewDelegate {
+    /// Coordinate span to support MapView
     var coordinateSpan: MKCoordinateSpan {
         get { MKCoordinateSpan(latitudeDelta: self.latitudeSpan, longitudeDelta: self.longitudeSpan) }
         set {
@@ -18,11 +19,14 @@ extension Location: MKMapViewDelegate {
         }
     }
     
+    /// Region to support MapView
     var region: MKCoordinateRegion {
         get { MKCoordinateRegion(center: coordinates, span: coordinateSpan) }
         set { coordinateSpan = newValue.span }
     }
     
+    /// Longitude and latitude are changed in one second after user navigation the location or update location name
+    /// - Parameter mapView: MKMapView
     @objc public func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
         let centre = mapView.centerCoordinate
         updateCount += 1

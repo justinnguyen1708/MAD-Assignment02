@@ -11,6 +11,7 @@ import CoreData
 private var isGeoCoding = false
 
 extension Location {
+    /// CLLocation using location latitude and longitude
     var location: CLLocation {
         get { CLLocation(latitude: latitude, longitude: longitude)}
         set {
@@ -19,6 +20,7 @@ extension Location {
         }
     }
     
+    /// 2d-coordinates using location longitude and latitude
     var coordinates: CLLocationCoordinate2D {
         get { CLLocationCoordinate2D(latitude: latitude, longitude: longitude)}
         set {
@@ -31,6 +33,7 @@ extension Location {
         managedObjectContext ?? NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     }
     
+    /// Find location name using location longitude and latitude
     func lookupName() {
         guard !isGeoCoding else {return}
         isGeoCoding = true
@@ -60,6 +63,7 @@ extension Location {
         }
     }
     
+    /// Find latitude and longitude using location name
     func lookupPosition() {
         guard !isGeoCoding else {return}
         isGeoCoding = true
